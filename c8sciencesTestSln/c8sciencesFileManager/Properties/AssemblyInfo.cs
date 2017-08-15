@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("c8tree")]
+[assembly: AssemblyTitle("c8sciencesFileManager")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft Corporation")]
-[assembly: AssemblyProduct("c8tree")]
+[assembly: AssemblyProduct("c8sciencesFileManager")]
 [assembly: AssemblyCopyright("Copyright © Microsoft Corporation 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fff78c6e-ac62-43da-9746-324837271b1b")]
+[assembly: Guid("b5e18865-d45f-4ae6-a226-b9a132e3c626")]
 
 // Version information for an assembly consists of the following four values:
 //

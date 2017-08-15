@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\c8sciencesFileManager\c8sciencesFileManager.csproj">
+      <Project>{b5e18865-d45f-4ae6-a226-b9a132e3c626}</Project>
+      <Name>c8sciencesFileManager</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

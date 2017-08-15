@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using c8sciencesFileManager;
+
 namespace c8csharpChallengeCLI
 {
     class Program
@@ -24,10 +26,54 @@ namespace c8csharpChallengeCLI
             Console.Write("Enter the name of the output directory:");
             string outputDirectory = Console.ReadLine();
 
+            Process(inputDirectory, outputDirectory);
 
             // Prompt user to close the program.
+            Console.WriteLine();
             Console.WriteLine("Press ENTER to exit this program.");
             Console.ReadLine();
+            Console.WriteLine();
+        }
+
+        public static void Process(string input, string output)
+        {
+            bool continueProcessing = true;
+
+            // show cwd
+            Console.WriteLine();
+            Console.WriteLine("Current Directory is: " + FSNode.GetCurrentDirectory());
+
+            // validate arguments
+            FSNode inputNode = new FSNode(input);
+            if (!inputNode.IsValid())
+            {
+                Console.WriteLine();
+                Console.WriteLine("Input directory is not valid: ({0})", input);
+                Console.WriteLine("Stop.");
+                continueProcessing = false;
+            }
+            FSNode outputNode = new FSNode(output);
+            if (continueProcessing && !outputNode.IsValid())
+            {
+                Console.WriteLine();
+                Console.WriteLine("Output directory is not valid: ({0})", output);
+                Console.WriteLine("Stop.");
+                continueProcessing = false;
+            }
+
+            if (continueProcessing)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Processing...");
+                Console.WriteLine();
+                Console.WriteLine("Result: {0}", inputNode.TreeCopy(outputNode));
+            }
+
+            if (continueProcessing)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Processing complete.");
+            }
         }
     }
 }
