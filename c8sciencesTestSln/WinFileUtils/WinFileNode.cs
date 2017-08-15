@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
+
 
 namespace WinFileUtils
 {
@@ -14,5 +16,6 @@ namespace WinFileUtils
             parent = null;
             children = null;
         }
+
     }
 }
